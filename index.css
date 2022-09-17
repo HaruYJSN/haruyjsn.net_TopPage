@@ -20,7 +20,7 @@ body{
 header{
     width: 100vw;
     height: 100vh;
-    background-image: url('bgimage-blur.png');
+    background-image: url('bgimage-blur.avif');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
