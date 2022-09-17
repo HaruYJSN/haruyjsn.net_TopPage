@@ -1,0 +1,116 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #001;
+}
+.container{
+    overflow: hidden;
+}
+.title{
+    padding: 0; /* これがないと何故か余白ができる */
+    margin: 0; /* これがないと何故か余白ができる2 */
+    font-family: 'Quicksand', sans-serif; /* フォント */
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    font-size:7.5vw;
+    text-shadow: 0 0 12px #333;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('bgimage-blur.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-color: black;
+    /* position: relative; */
+    /* 真ん中に表示させる */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+header > div > p{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /* font-weight: lighter; */
+    color: white;
+    text-align: center;
+    font-size:4vw;
+    text-shadow: 0 0 12px #333;
+    margin-bottom: z;
+}
+
+.links{
+    width: 75vw;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items:center;
+    margin: auto;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    display:flex;
+}
+
+.linkbtn a{
+    width: 10vw;
+    height: 4em;
+    display: inline-block;
+    /* margin: 5px; */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    /* color: white; */
+    text-align: center;
+    font-size:2vw;
+    text-shadow: 0 0 12px #333;
+
+    position: relative;
+    display: inline-block;
+    /* padding: .2em 1em; */
+    border: 2px solid gray;
+    color: gray;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+    outline: none;
+    transition: all .1s;
+  }
+  .linkbtn a::before,
+  .linkbtn a::after {
+    position: absolute;
+    z-index: 2;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    box-sizing: content-box;
+  }
+  .linkbtn a::before {
+    top: -2px;
+    left: -2px;
+  }
+  .linkbtn a::after {
+    bottom: -2px;
+    right: -2px;
+  }
+  .linkbtn a:hover {
+    color: white;
+  }
+  .linkbtn a:hover::before,
+  .linkbtn a:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  .linkbtn a:hover::before {
+    border-bottom-color: white;
+    border-left-color: white;
+    transition: height .3s, width .3s .3s;
+  }
+  .linkbtn a:hover::after {
+    border-top-color: white;
+    border-right-color: white;
+    transition: height .3s, width .3s .3s;
+  }
