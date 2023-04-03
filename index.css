@@ -33,7 +33,6 @@ footer{
   font-weight: lighter;
   color: white;
   text-align: center;
-  font-size: 7.5vw;
   text-shadow: 0 0 12px #333;
 }
 
@@ -63,8 +62,46 @@ header>div>p {
   margin-bottom: z;
 }
 
+/* レスポンシブ対応 */
+/* SP */
+@media screen and (max-width: 600px) {
+  .sociallinks>.linkbtn>a{
+    height: 3em;
+    font-size: 2vh !important;
+  }
+
+  .links {
+    height: 65vh;
+    width: 85vw;
+    display: flex;
+    flex-flow: column;
+  }
+  .linkbtn a {
+    width: 25vw;
+    height: 3em;
+    font-size: 3vh;
+  }
+  .title{
+    font-size: 5vh;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 600px){
+  .linkbtn a{
+    width: 10vw;
+    height: 3em;
+    font-size: 2.5vw;
+  }
+  .title{
+    font-size: 7.5vw;
+  }
+}
+
+/* レスポンシブ対応 以上 */
+
 .links {
-  width: 85vw;
+  width: 75vw;
   /* justify-content: center; */
   justify-content: space-between;
   align-items: center;
@@ -84,7 +121,7 @@ header>div>p {
   font-weight: lighter;
   color: white;
   text-align: center;
-  font-size: 4vh;
+  font-size: min(4vw,4vh);
   /* height:4vw; */
   height:5vh;
   display: flex;
@@ -95,7 +132,7 @@ header>div>p {
 
 /* Profile CSS */
 
-.profile>h2{
+.profile>h2, .profile>div>h3{
   padding: 1.8rem;
   /* これがないと何故か余白ができる */
   margin: 0;
@@ -106,8 +143,12 @@ header>div>p {
   color: white;
   text-align: center;
   /* font-size: 5vw; */
-  font-size: 4rem;
+  font-size: min(4rem,6vh);
   text-shadow: 0 0 12px #333;
+}
+
+.profile>div>h3{
+  font-size: min(3rem,4vh);
 }
 
 .profile>div>.section{
@@ -136,27 +177,36 @@ header>div>p {
   border-radius: 50%
 }
 
+.sociallinks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+}
+
+.social-logo{
+  width: 3rem;
+  margin: 1rem;
+}
+
 .profile>div>p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 300;
   color: white;
   text-align: center;
   /* font-size: 2vw; */
-  font-size: 1.5rem;
+  font-size: min(1.5rem,3vh);
   text-shadow: 0 0 12px #333;
   margin-bottom: z;
 }
 
-.linkbtn a {
-  width: 10vw;
-  height: 4em;
+.linkbtn>a {
   display: inline-block;
   /* margin: 5px; */
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
   /* color: white; */
   text-align: center;
-  font-size: 2vw;
   text-shadow: 0 0 12px #333;
 
   position: relative;
